@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Stopwatch from './Component/Stopwatch';
+import Alarm from './Component/Alarm';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+return (<div><div className='app-container'>
+
+<Stopwatch></Stopwatch>
+
+<Alarm/>
+</div>
+<footer> <hr></hr>
+    &#169; Himanshu Kumar </footer>
+</div>
+
+
+)
+
 }
 
 export default App;

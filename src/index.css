@@ -1,3 +1,7 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,93 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.main-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+  background-image: linear-gradient(to right,rgb(58, 58, 168),rgb(181, 59, 183));
+  color: white;
+  font-size: 3rem;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+button{
+  height: 40px;
+  width: 140px;
+  font-size: 1rem;
+  font-weight: bolder;
+  padding: 5px;
+  margin: 7px;
+  border-radius: 10px;
+  border: 2px solid rgb(147, 114, 156);
+  color: white;
+}
+.button>:first-child{
+  background-color: blue;
+}
+.button>:first-child:hover{
+  background-color: rgb(86, 86, 139);
+  cursor: pointer;
+}
+.button>:nth-child(2){
+  background-color: red;
+  cursor: pointer;
+}
+.button>:nth-child(2):hover{
+  background-color: rgb(143, 65, 65);
+}
+.button>:last-child{
+background-color: aqua;
+}
+.button>:last-child:hover{
+  background-color: rgb(64, 104, 104);
+  cursor: pointer;
+
+}
+.app-container{
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  margin: 4rem;
+}
+
+.alarm{
+  height: 15vh;
+  width: 30vw;
+
+}
+
+.alarm-container{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.alarm-container form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 25rem;
+  height: 18rem;
+  border-radius: 1rem;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to top right,rgb(55, 158, 174),rgb(145, 36, 213));
+}
+.alarm-container form input{
+  width: 10rem;
+  height: 1rem;
+  padding: 10px;
+  border-radius: 10px;
+  border: 3px solid grey;
+}
+footer{
+  text-align: center;
+}
+hr{
+  width: 70vw;
 }
