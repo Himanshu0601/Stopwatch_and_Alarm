@@ -1,106 +1,143 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;1,400&family=PT+Serif:ital,wght@1,700&family=Roboto+Mono:wght@300&display=swap');
 
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header{
+  height: 40px;
+  display: flex;
+  align-items: center;
+  color: white;
+  background-image: linear-gradient(to top right, rgb(99, 98, 98), rgb(11, 10, 10));
 }
-
-.main-container{
+header ul{
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  font-size: 1.3rem;
+  margin-left: 50px;
+}
+header ul li:hover{
+  cursor: pointer;
+  border-bottom: 5px solid red;
+}
+.main-app {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 40vh;
-  background-image: linear-gradient(to right,rgb(58, 58, 168),rgb(181, 59, 183));
-  color: white;
-  font-size: 3rem;
-  border-radius: 1rem;
-  padding: 1rem;
+  gap: 30px;
+  height: 699px;
+  background-image: linear-gradient(to top right, rgb(99, 98, 98), rgb(11, 10, 10));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  justify-content: space-around;
 }
-button{
-  height: 40px;
-  width: 140px;
-  font-size: 1rem;
-  font-weight: bolder;
-  padding: 5px;
-  margin: 7px;
-  border-radius: 10px;
-  border: 2px solid rgb(147, 114, 156);
+
+footer {
   color: white;
+  text-align: center;
+}
+
+footer hr {
+  width: 80vw;
+  margin: 10px;
+}
+
+.app-container {
+  width: 617px;
+  height: 541px;
+  gap: 40px;
+  border-radius: 1rem;
+  background-color: yellowgreen;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 400px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgb(112, 102, 102);
+  /* display: none; */
+}
+.stopwatch-time{
+  font-size: 60px;
+  font-family: 'Merriweather', serif;
+font-family: 'PT Serif', serif;
+font-family: 'Roboto Mono', monospace;
+  
+}
+
+.button {
+  display: flex;
+  gap: 10px;
+}
+
+.button>button {
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
+  box-shadow: 2px 1px 1px 1px rgb(125, 85, 85);
 }
 .button>:first-child{
-  background-color: blue;
-}
-.button>:first-child:hover{
-  background-color: rgb(86, 86, 139);
-  cursor: pointer;
+  background-color: green;
+  border: 2px solid green;
+  color: white;
 }
 .button>:nth-child(2){
   background-color: red;
+  border: 2px solid red;
+  color: rgb(119, 255, 0);
+
+}
+.button>button:hover{
   cursor: pointer;
-}
-.button>:nth-child(2):hover{
-  background-color: rgb(143, 65, 65);
-}
-.button>:last-child{
-background-color: aqua;
-}
-.button>:last-child:hover{
-  background-color: rgb(64, 104, 104);
-  cursor: pointer;
-
-}
-.app-container{
-  display: flex;
-  justify-content: space-between;
-  gap: 3rem;
-  margin: 4rem;
-}
-
-.alarm{
-  height: 15vh;
-  width: 30vw;
-
 }
 
 .alarm-container{
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 20px;
+  width: 400px;
+  height: 400px;
+  justify-content:flex-start;
   align-items: center;
+  border-radius: 50%;
+  background-color: rgb(112, 102, 102);
+  /* display: none; */
+ 
+}
+.alarm-time{
+  margin-top: 55px;
+  font-size: 30px;
+  font-family: 'Merriweather', serif;
+font-family: 'PT Serif', serif;
+font-family: 'Roboto Mono', monospace;
+}
+.alarm-time-content{
+  font-size: large;
+  color: rgb(131, 183, 247);
 }
 .alarm-container form{
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  width: 25rem;
-  height: 18rem;
-  border-radius: 1rem;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(to top right,rgb(55, 158, 174),rgb(145, 36, 213));
+  gap: 15px;
 }
 .alarm-container form input{
-  width: 10rem;
-  height: 1rem;
-  padding: 10px;
-  border-radius: 10px;
-  border: 3px solid grey;
-}
-footer{
-  text-align: center;
-}
-hr{
-  width: 70vw;
+  width: 180px;
+  height: 25px;
+  padding: 2px 10px;
 }
